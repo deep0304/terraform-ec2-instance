@@ -102,6 +102,15 @@ terraform apply
 This will create a separate VPC setup on AWS.
 
 ---
+---
+
+## 🧹 Cleaning Up (Destroy Infrastructure)
+
+Once you're done with the EC2 instance and want to avoid AWS charges, you can cleanly destroy all the resources created by Terraform:
+
+```bash
+  terraform destroy
+```
 
 ## 🧠 Author
 
