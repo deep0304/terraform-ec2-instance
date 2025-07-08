@@ -1,6 +1,10 @@
-# Terraform EC2 
+# Terraform EC2 (with Nginx Web Server)
 
-This project provisions an AWS EC2 instance using **Terraform**, with support for both **Terraform Cloud** and **local CLI** execution.
+This project provisions an EC2 instance on AWS using **Terraform**, and supports both **Terraform Cloud** and **local CLI** execution.
+
+✅ The instance is automatically configured to install and run **Nginx** during boot using the `user_data` block.  
+This setup ensures that as soon as the EC2 instance is launched, Nginx is installed, started, and serving a custom HTML landing page — **no manual setup required**.
+
 
 ---
 
@@ -90,6 +94,18 @@ ssh -i "your-key.pem" ec2-user@<public-ip>
 ![ssh into instance ](https://github.com/user-attachments/assets/f48cd0d4-f53a-4411-a18d-1b59f39d524d)
 
 ---
+## 🖥️ Demo Page
+
+You will see a page similar to this:
+
+![Original Nginx Page](https://github.com/user-attachments/assets/ed17af04-1848-4260-891b-d33957c77f65)
+
+Later, I changed the content of the page — it now looks like this:
+
+![Updated HTML Page](https://github.com/user-attachments/assets/9824f0c3-05a6-4613-8d4f-c315f739be1e)
+
+---
+
 
 ## 🧪 Bonus: Optional VPC Setup
 
